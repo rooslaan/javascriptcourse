@@ -1,17 +1,9 @@
-const projectName = 'Caйт магазина';
-const price = 2000;
-const author = 'Василий П.П.'
+const age = '18';
+console.log(Number(age) + 5);
+console.log(age - 3);
+const userName = 'Vasya';
+console.log(Number(userName) + 3);
+console.log(typeof NaN);
 
-
-const template = author + ' заказал ' + projectName + ' по цене ' + price + '$';
-console.log(template);
-
-const template2= `${author} заказал ${projectName} по цене ${price}$`;
-console.log(template2);
-
-const template3 = 'Проэкт \n' + 'цена: ' + price + '$';
-console.log(template3);
-
-const template4 = `Проект
-Цена: ${price}$`;
-console.log(template4);
+const a = 2 + '10';
+console.log(a - 10);
