@@ -1,9 +1,10 @@
-const age = '18';
-console.log(Number(age) + 5);
-console.log(age - 3);
-const userName = 'Vasya';
-console.log(Number(userName) + 3);
-console.log(typeof NaN);
+const money = 10;
+const price = 50;
 
-const a = 2 + '10';
-console.log(a - 10);
+if(money > price) {
+    console.log('Может купить наш продукт');
+} else if (money > 5) {
+    console.log('Может купить наш mini продукт');
+} else {
+    console.log('He может купить наш продукт');
+}
