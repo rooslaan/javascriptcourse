@@ -1,12 +1,11 @@
-const bmwX3 = 100000;
-const fordFocusPrice = 10000;
-const money = 20000;
-let message;
+const answr = prompt('Сколько будет 7 + или - 15?');
 
-if (money > bmwX3) {
-    message = 'BMW';
-} else {
-    message = 'Велосипед';
+switch(true) {
+    case Number(answr) === 22 :
+    case Number(answr) === -8 :
+    case answr === 'Я не робот' :
+        console.log('Успех!');
+        break;
+    default:
+        console.log('Вы робот!');
 }
-
-console.log(`Я хочу купить ${money > bmwX3 ? 'BMW' : money > fordFocusPrice ? 'Ford Focus' : 'Велосипед'}`); 
