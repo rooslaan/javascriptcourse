@@ -1,13 +1,27 @@
-console.log('вася' || 'олег');
-console.log(false || 'олег');
+/*
+let balance = 100;
+let bonusBalance = 90;
+let isBanned = true;
+let isExist = true;
+let isSelling = true;
 
-console.log('вася' && 'олег');
-console.log(false && 'олег');
+const a = balance >= 1000 && isBanned && isExist && isSelling;
+const b = bonusBalance >= 100 && isBanned && isExist && isSelling;
 
-let a = 'max';
-const userName = a || 'петя';
-console.log(userName);
+if ((a === true) || (b === true)) {
+    console.log('Покупка успешна!');
+} else {
+    console.log('Не достаточно средств!(');
+}
+*/
+const balance = 1000;
+const bonusBalance = 90;
+const isBanned = false;
+const isExist = false;
+const isSelling = true;
 
-const isAdmin = true;
-const fileName = isAdmin && 'file.mp4'
-console.log(fileName);
+const canBuy = (balance >= 1000) || (bonusBalance >= 100)
+&& !isBanned && !isExist && isSelling;
+console.log(`Могу купить игру: ${canBuy ? 'Да)' : 'Нет('}`)
+
+
