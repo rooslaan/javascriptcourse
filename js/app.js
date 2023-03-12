@@ -1,11 +1,13 @@
+console.log('вася' || 'олег');
+console.log(false || 'олег');
+
+console.log('вася' && 'олег');
+console.log(false && 'олег');
+
+let a = 'max';
+const userName = a || 'петя';
+console.log(userName);
+
 const isAdmin = true;
-const canWrite = true;
-
-console.log(`Системный файл ${isAdmin && canWrite}`);
-console.log(`Обычный файл ${isAdmin || canWrite}`);
-console.log(`Инвертируем права админа ${!isAdmin}`);
-
-const isEdited = true;
-
-console.log(`Системный файл с редактированием 
-${isAdmin && canWrite && !isEdited}`);
+const fileName = isAdmin && 'file.mp4'
+console.log(fileName);
