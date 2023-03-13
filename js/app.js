@@ -1,5 +1,12 @@
-function toPower (num, power = 2) {
-    return num ** power;
+function canAccessWebSite(age) {
+    if (age < 18){
+        return 'no'
+    }
+    return 'yes';
+
 }
-console.log(toPower(2, 3));
-console.log(toPower(2));
+
+console.log(canAccessWebSite(19));
+
+const canAccessWebSite2 = age => age < 18 ? 'no' : 'yes';
+console.log(canAccessWebSite2(19)); 
