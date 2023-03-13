@@ -1,8 +1,5 @@
-function powerOfTwo (num) {
-    return num * num;
+function toPower (num, power = 2) {
+    return num ** power;
 }
-console.log(powerOfTwo(5));
-
-const poft = (num) => num * num;
-console.log(poft(6));
-
+console.log(toPower(2, 3));
+console.log(toPower(2));
