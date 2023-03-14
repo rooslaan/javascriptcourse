@@ -1,16 +1,16 @@
-const age = 25;
-const haveWork = false;
-const moneyInUSD = 1500;
+const age = 24;
+const haveWork = true;
+const moneyInUSD = 1600;
 
 function canBuyMac(moneyInUSD1, age1, haveWork1) {
     switch(true){
         case moneyInUSD1 >= 2000:
             return true;
-        case 2000 > moneyInUSD1 >= 1900:
+        case moneyInUSD1 + 100 >= 2000:
             return credit_100_USD(age1);
-        case 1900 > moneyInUSD1 >= 1500:
+        case moneyInUSD1 + 500 >= 2000:
             return credit_500_USD(age1, haveWork1);
-        case moneyInUSD1 < 1500:
+        default:
             return false;  
     }
 }
