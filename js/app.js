@@ -1,17 +1,13 @@
-const userNames = ['Vasya', 'Petya', 'Katya'];
-console.log(userNames);
-userNames[2] = 'Kris';
-console.log(userNames);
+const roles = ['user', 'admin', 'manager', 'admin'];
 
-userNames.push('Nick');
-console.log(userNames);
+const elIndex = roles.indexOf('admin');
+console.log(elIndex);
+const elIndex2 = roles.indexOf('superUser');
+console.log(elIndex2);
 
-const el = userNames.unshift('Max');
-console.log(userNames);
-console.log(el);
+if (roles.includes('admin')) {
+    console.log('Доступ есть!');
+}
 
-userNames.pop();
-console.log(userNames);
+console.log(roles.includes('admin'));
 
-userNames.shift();
-console.log(userNames);
