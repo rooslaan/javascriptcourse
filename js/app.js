@@ -1,25 +1,24 @@
-const tasks = ['Задача 1', 'Задача 2', 'Задача 3'];
+const url = 'https://purpleschool.ru/course/javascript';
+/*
+const res = url.split('/');
+let res1 = res[0].split(':');
+console.log('Протокол - ' + res1[0]);
+console.log('Доменное имя - ' + res[2]);
+let res2 = res.splice(3, 2);
+console.log('Путь внутри сайта - ' + res2.join('/'));*/
 
-function addEl(tasks, nameTask) {
-    tasks.push(nameTask);
-    return tasks;
+function getUrlData(url) {
+    const [protocol, _, hostName, ...path] = url.split('/');
+    if (protocol === 'https' || protocol === 'http') {
+        if (!hostName.includes('.')) {
+            return;
+        }
+        console.log([protocol, _, hostName, path]);
+        console.log('Протокол - ' + protocol.split(':')[0]);
+        console.log('Доменное имя - ' + hostName);
+        console.log('Путь внутри сайта - /' + path.join('/'));
+    }
+    
 }
 
-function deleteEl(tasks, nameTask) {
-    if (tasks.indexOf(nameTask) >= 0) {
-        tasks.indexOf(nameTask);
-        tasks.splice(tasks.indexOf(nameTask), 1);
-        return tasks;
-    }
-    return 'Такого элемента нет!';
-}
-
- function swapEl(tasks, nameTask) {
-    if (tasks.indexOf(nameTask) >= 0) {
-        tasks.splice(tasks.indexOf(nameTask), 1);
-        tasks.unshift(nameTask);
-        return tasks
-    }
-    return 'Такого элемента нет!';
- }
- console.log(deleteEl(tasks, 'Задача 4'));
+getUrlData(url);
