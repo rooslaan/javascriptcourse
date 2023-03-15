@@ -1,29 +1,25 @@
-const age = 24;
-const haveWork = true;
-const moneyInUSD = 1600;
+const role1 = 'admin';
+const role2 = 'user';
+const role3 = 'superUser';
 
-function canBuyMac(moneyInUSD1, age1, haveWork1) {
-    switch(true){
-        case moneyInUSD1 >= 2000:
-            return true;
-        case moneyInUSD1 + 100 >= 2000:
-            return credit_100_USD(age1);
-        case moneyInUSD1 + 500 >= 2000:
-            return credit_500_USD(age1, haveWork1);
-        default:
-            return false;  
-    }
+const roles = ['admin', 'user', 'superUser'];
+const userInfo = ['Anna', 25];
+console.log(roles);
+console.log(roles[0]);
+console.log(roles.length);
+console.log(roles[roles.length - 1]);
+
+console.log(roles.at(0));
+console.log(roles.at(-1));
+
+const usersAge = [2040 - 2022, 20 > 10 ? 1 : 2];
+console.log(usersAge);
+
+const userNames = new Array('Vasya', 'Petya', 'Katya');
+console.log(userNames);
+
+function square(el) {
+    return el * el;
 }
-function credit_100_USD(age2) {
-    if (age2 < 24) {
-        return false;
-    }
-    return true;
-}
-function credit_500_USD(age3, haveWork3) {
-    if (haveWork3 && age3 >= 24) {
-        return true;
-    }
-    return false;
-}
-console.log(canBuyMac(moneyInUSD, age, haveWork));
+
+console.log(square([1, 2, 3]));
