@@ -1,18 +1,15 @@
-const tasks = ['Задача 1', 'Задача 2', 'Задача 3'];
+// for(let i = 1; i < 5; i++) {
+//     console.log(`Цикл 1 - ${i}`);
+//     for(let j = 1; j < 5; j++) {
+//         console.log(`Цикл 2 - ${j}`);
+//     }
+// }
+
+const tasks = [[1, 'task1'], 
+                [2, 'task2']];
 
 for(let i = 0; i < tasks.length; i++) {
-    if (tasks[i] === 'Задача 2') {
-        continue;
+    for(let j = 0; j < tasks[i].length; j++) {
+        console.log(tasks[i][j]);
     }
-    console.log(tasks[i]);
 }
-
-console.log('-------');
-
-for(let i = 0; i < tasks.length; i++) {
-    if (tasks[i] === 'Задача 2') {
-        break;
-    }
-    console.log(tasks[i]);
-}
-
