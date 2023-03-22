@@ -1,16 +1,22 @@
-const transactionInUSD = [10, -7, 50, -10, 100];
-let transactionInUAH2 = transactionInUSD
-    .map((transaction, i) =>  {
-        console.log(i); //просто вывод индекса, как пример
-        return transaction * 40
-    });
+const operations = [100, -20, 7, -20, 50];
+// const positivOperations = [];
 
-console.log(transactionInUSD);
-console.log(transactionInUAH2);
-
-// const transactionInUAH = [];
-// for (let transaction of transactionInUSD) {
-//     transactionInUAH.push(transaction * 40);
+// for (let operation of operations) {
+//     if (operation > 0)
+//     positivOperations.push(operation);
 // }
 
-// console.log(transactionInUAH);
+// console.log(positivOperations);
+
+const positivOperations = operations
+    .filter((operation) => {
+        return operation > 0;
+    });
+console.log(positivOperations);
+
+const positivUAHOperations = operations
+    .filter((operation) => {
+        return operation > 0;
+    })
+    .map((operation) => operation * 40);
+console.log(positivUAHOperations);
