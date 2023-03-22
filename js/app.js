@@ -1,22 +1,10 @@
-const operations = [100, -20, 7, -20, 50];
-// const positivOperations = [];
+const prices = [[100, 200], 
+                [120, 100], 
+                [200, 350]];
 
-// for (let operation of operations) {
-//     if (operation > 0)
-//     positivOperations.push(operation);
-// }
 
-// console.log(positivOperations);
+let pricesDifference = prices
+    .map((price) => price[1] - price[0])
+    .filter((price) => price > 0);
 
-const positivOperations = operations
-    .filter((operation) => {
-        return operation > 0;
-    });
-console.log(positivOperations);
-
-const positivUAHOperations = operations
-    .filter((operation) => {
-        return operation > 0;
-    })
-    .map((operation) => operation * 40);
-console.log(positivUAHOperations);
+console.log(pricesDifference);
